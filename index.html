@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincent</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-brand img {
+      height: 40px;
+    }
+    .hero-section {
+      background: url('images/IMG-20250222-WA0016.jpg') no-repeat center center/cover; /* Background image */
+      height: 150vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative; /* For positioning the buttons */
+    }
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .hero-section p {
+      font-size: 1.5rem;
+    }
+    .education-section {
+      padding: 60px 0;
+      background-color: #f8f9fa; /* Light background for contrast */
+    }
+    .footer {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #ddd;
+    }
+
+    /* WhatsApp and Call buttons */
+    .action-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 80px; /* Adjusted to avoid overlapping with the footer */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000; /* Ensure buttons are above other content */
+    }
+    .action-buttons a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .action-buttons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .action-buttons .whatsapp-btn {
+      background-color: #25d366; /* WhatsApp green */
+    }
+    .action-buttons .call-btn {
+      background-color: #007bff; /* Call blue */
+    }
+
+    /* Animation for icons */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .action-buttons a i {
+      animation: bounce 2s infinite;
+    }
+
+    /* Education Section Styling */
+    .education-section a {
+      text-decoration: none;
+      color: #007bff; /* Link color */
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    .education-section a h3 {
+      background-color: #ffffff; /* White background */
+      padding: 15px 20px;
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .education-section a:hover h3 {
+      color: #ffffff; /* White text on hover */
+      background-color: #007bff; /* Blue background on hover */
+      transform: translateY(-5px); /* Slight lift on hover */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+      .hero-section p {
+        font-size: 1.2rem;
+      }
+      .action-buttons {
+        right: 10px;
+        bottom: 70px; /* Adjusted for smaller screens */
+      }
+      .action-buttons a {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+      .education-section a h3 {
+        padding: 10px 15px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://via.placeholder.com/150x50" alt="">Chi-Fire
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h1>Welcome to my Personal website</h1>
+      <p>Your journey to success starts here.</p>
+    </div>
+    <!-- WhatsApp and Call buttons -->
+    <div class="action-buttons">
+      <a href="https://wa.me/message/KOEJ7QSUMAM3J1" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:+263714384521" class="call-btn">
+        <i class="fas fa-phone"></i> Call +263 714 384 521
+      </a>
+      <a href="tel:+263781132817" class="call-btn">
+        <i class="fas fa-phone"></i> Call +263 781 132 817
+      </a>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Education</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-book fa-3x mb-3"></i>
+          <a href="https://classroom.google.com/u/1/">
+            <h3>2.2 Courses</h3>
+          </a>
+          <p>Access a wide range of 2.2 courses tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 web_man. All rights reserved.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/vincent-p-w-chimoto-4906402a5"><i class="fab fa-linkedin"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
